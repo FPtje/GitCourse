@@ -9,6 +9,7 @@
 \usepackage{lmodern}
 \usepackage{epstopdf}
 \usepackage{ulem}
+\usepackage{listings}
 \usepackage[labelformat=empty]{caption}
 
 \author{Falco Peijnenburg}
@@ -82,17 +83,55 @@
 
 \subsection{How to install}
 \begin{frame}
+\begin{itemize}
+\item Linux:
+\begin{itemize}
+\item apt-get install git
+\item pacman -S git
+\item yum install git
+\item ...
+\end{itemize}
+\item Windows/Mac: http://git-scm.com/downloads
 
+When installing, use advanced context menu integration. Use default settings in other screens
+\end{itemize}
 \end{frame}
 
 \subsection{Opening git bash}
 \begin{frame}
+Linux/Mac
+\begin{itemize}
+\item Open the terminal
+\item cd to the right folder
+\end{itemize}
+
+Windows:
+\begin{itemize}
+\item Right click a folder
+\item Click ``Git Bash''. Don't use the normal command prompt.
+\end{itemize}
+
+Tip: Leave the terminal open in the background while you work.
+
 
 \end{frame}
 
 \subsection{Setting up}
-\begin{frame}
+\begin{frame}[fragile]
+\begin{itemize}
+\item Git needs to know your name and email address.
+\item It uses that information to assign an author to a commit.
+\end{itemize}
 
+\begin{lstlisting}[frame=single]
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+\end{lstlisting}
+
+\begin{itemize}
+\item You will need a public/private keypair to communicate with a git server through ssh. Follow this guide:
+\item \url{https://help.github.com/articles/generating-ssh-keys}
+\end{itemize}
 \end{frame}
 
 \subsection{Making a repository}
