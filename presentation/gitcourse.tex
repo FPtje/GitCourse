@@ -206,8 +206,23 @@ Tip for .gitignore files:
 \end{frame}
 
 \subsection{Committing changes}
-\begin{frame}
-
+\begin{frame}[fragile]{Committing changes}
+\begin{itemize}
+\item Commit everything that's staged using git commit
+\item Every commit message \textit{must} have a commit message! Tell git what you've done!
+\end{itemize}
+\begin{verbatim}
+-- Opens vi or nano by default for the commit message:
+git commit
+-- Inline commit message:
+git commit -m "Message here"
+-- Skip staging of modified files
+git commit -a -m "Message here"
+git commit -am "Message here"
+\end{verbatim}
+\begin{itemize}
+\item You cannot skip the staging of new files. Add them manually.
+\end{itemize}
 \end{frame}
 
 
