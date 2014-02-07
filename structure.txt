@@ -36,7 +36,6 @@ Initial commit (assuming repo initiated with git init, which is easier to unders
 Further commits
 	- git diff
 	- git checkout file: resetting file to the state of last commit
-	- git commit -a -m (or -am): commit everything that has been changed (does not add new files!)
 	- git log (See: http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History)
 	- (gitk)
 	- git show
