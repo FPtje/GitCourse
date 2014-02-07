@@ -9,7 +9,6 @@
 \usepackage{lmodern}
 \usepackage{epstopdf}
 \usepackage{ulem}
-\usepackage{listings}
 \usepackage[labelformat=empty]{caption}
 
 \author{Falco Peijnenburg}
@@ -123,10 +122,10 @@ Tip: Leave the terminal open in the background while you work.
 \item It uses that information to assign an author to a commit.
 \end{itemize}
 
-\begin{lstlisting}[frame=single]
+\begin{verbatim}
 git config --global user.name "John Doe"
 git config --global user.email "johndoe@example.com"
-\end{lstlisting}
+\end{verbatim}
 
 \begin{itemize}
 \item You will need a public/private keypair to communicate with a git server through ssh. Follow this guide:
@@ -135,12 +134,25 @@ git config --global user.email "johndoe@example.com"
 \end{frame}
 
 \subsection{Making a repository}
-\begin{frame}
+\begin{frame}[fragile]
+Two options:
 
-\end{frame}
+\begin{itemize}
+\item Start your own empty local repository.
+\end{itemize}
 
-\begin{frame}
+	\begin{verbatim}
+	git init
+	\end{verbatim}
 
+\begin{itemize}
+\item Clone the repository from a server.
+\end{itemize}
+
+	\begin{verbatim}
+	git clone URL_HERE
+	git clone git@github.com:FPtje/DarkRP.git
+	\end{verbatim}
 \end{frame}
 
 
@@ -152,7 +164,7 @@ git config --global user.email "johndoe@example.com"
 
 
 \section{Initial commit}
-\begin{frame}
+\begin{frame}{Initial commit}
 \end{frame}
 
 \subsection{Git status}
