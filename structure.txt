@@ -51,6 +51,7 @@ The tree of commits (what a commit is, how multiple commits relate to one anothe
 Resolving conflicts
 	- How a conflict looks in git status
 	- Fixing a conflict
+	- git mergetool
 	- git add
 	- git commit
 
