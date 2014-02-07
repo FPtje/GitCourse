@@ -56,6 +56,7 @@ Resolving conflicts
 	- git commit
 
 Remote repositories
+	- Local vs remote
 	- git remote -v/add/remove (git branch --set-upstream-to)
 	- git push origin master/git push if branch is set to track branch on remote
 		(git push origin :branch to remove remote branch)
