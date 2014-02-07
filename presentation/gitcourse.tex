@@ -260,8 +260,23 @@ git log \centerline{\includegraphics[width=\textheight]{gitlog.png}}
 \end{frame}
 
 \subsection{git show}
-\begin{frame}
+\begin{frame}[fragile]{git show}
+\begin{verbatim}
+git show
+\end{verbatim}
+\begin{itemize}
+\item Shows last commit information + diff
+\end{itemize}
 
+\begin{verbatim}
+git show Hash_here
+git show 7251b9
+\end{verbatim}
+\begin{itemize}
+\item Shows commit info and diff of given commit
+\item You can show any git object (commits, branches, stashes)
+\item You don't have to use the full hash
+\end{itemize}
 \end{frame}
 
 
