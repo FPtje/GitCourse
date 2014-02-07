@@ -293,23 +293,62 @@ git show 7251b9
 \end{frame}
 
 \subsection{Creating your own branch}
-\begin{frame}
+\begin{frame}[fragile]{Creating your own branch}
+\begin{verbatim}
+git branch branchname
+git checkout branchname
+\end{verbatim}
+\begin{itemize}
+\item Mind the git checkout command. It might be confusing at first.
+\item Shorter:
+\end{itemize}
 
+\begin{verbatim}
+git checkout -b branchname
+\end{verbatim}
+\begin{itemize}
+\item Official definition of checkout:
+\item \textit{Checkout a branch or paths to the working tree}
+\end{itemize}
 \end{frame}
 
 \subsection{Switching branches}
-\begin{frame}
-
+\begin{frame}[fragile]{Switching branches}
+\begin{verbatim}
+git checkout master
+git checkout branchname
+git checkout otherBranch
+\end{verbatim}
+\begin{itemize}
+\item You can switch from any branch to any other branch
+\item Might fail if you have uncommitted changes
+\end{itemize}
 \end{frame}
 
 \subsection{Merging branches}
-\begin{frame}
-
+\begin{frame}[fragile]{Merging branches}
+\begin{verbatim}
+git checkout mergeTo
+git merge mergeFrom
+\end{verbatim}
+\begin{itemize}
+\item Make sure you're on the right branch first
+\item Conflicts may occur when merging
+\item A new special merge commit will be created with \textit{two} parent commits
+\item All commits from the mergeFrom branch will be visible in the mergeTo branch
+\end{itemize}
 \end{frame}
 
 \subsection{Removing branches}
-\begin{frame}
-
+\begin{frame}[fragile]{Removing branches}
+\begin{verbatim}
+git branch -d branchname
+git branch -D branchname
+\end{verbatim}
+\begin{itemize}
+\item The former will fail if there are unmerged changes
+\item The latter will not, so be careful
+\end{itemize}
 \end{frame}
 
 
