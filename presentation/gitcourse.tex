@@ -382,13 +382,41 @@ git branch -D branchname
 
 \subsection{What is a conflict}
 \begin{frame}
+\begin{itemize}
+	\item Harry and Larry are working on a website
+	\item Harry and Larry both edit the footer div of the main web page
+	\item Harry is working on master
+	\item Larry is working on the refactor branch he created
+	\item After a while Larry is done working and wants to merge refactor into master
+\end{itemize}
+\end{frame}
 
+\begin{frame}[fragile]
+\begin{verbatim}
+$ git merge refactor
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit
+the result.
+\end{verbatim}
+\begin{itemize}
+	\item Two people edited the same file in the same place
+	\item What should git do with that?
+	\begin{itemize}
+	\item Use Harry's version?
+	\item Use Larry's version?
+	\item Use a combination of both versions?
+	\item Use neither version?
+	\end{itemize}
+\end{itemize}
 \end{frame}
 
 \subsection{Fixing the conflicts in the file}
 % It's not a mess
-\begin{frame}
+\begin{frame}{Fixing the conflicts in the file}
+\begin{itemize}
 
+\end{itemize}
 \end{frame}
 
 \subsection{Registering merged file}
