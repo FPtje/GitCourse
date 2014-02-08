@@ -408,20 +408,52 @@ the result.
 	\item Use a combination of both versions?
 	\item Use neither version?
 	\end{itemize}
+
+	\item Another kind of conflict: Larry modifies a file that Harry removed. Use modified or removed?
 \end{itemize}
 \end{frame}
 
 \subsection{Fixing the conflicts in the file}
 % It's not a mess
-\begin{frame}{Fixing the conflicts in the file}
+\begin{frame}[fragile]{Fixing the conflicts in the file}
 \begin{itemize}
-
+\item Git will edit the files that have the conflicts
+\item ``conflict markers'' will be added.
+\item git status and git diff will tell you which files are conflicted.
+\item Fix the conflicts in visual studio or your favourite text editor.
+\item You can also set up a visual merge tool like opendiff, kdiff3, tkdiff, xxdiff, meld, \textbf{tortoisemerge}, gvimdiff, diffuse, ecmerge, p4merge, araxis, bc3, codecompare, emerge or vimdiff
 \end{itemize}
 \end{frame}
 
-\subsection{Registering merged file}
-\begin{frame}
+\begin{frame}[fragile]
+\begin{verbatim}
+<<<<<<< HEAD
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+  please contact us at support@github.com
+</div>
+>>>>>>> refactor
+\end{verbatim}
 
+Possible resolution:
+\begin{verbatim}
+<div id="footer">
+  please contact us at email.support@github.com
+</div>
+\end{verbatim}
+\end{frame}
+
+\subsection{Registering merged file}
+\begin{frame}[fragile]
+\begin{verbatim}
+git add fixedFile
+\end{verbatim}
+\begin{itemize}
+\item You must add every file manually
+\item Only add a file when all conflicts in it are resolved (check with git diff)
+
+\end{itemize}
 \end{frame}
 
 \subsection{Committing the merge}
