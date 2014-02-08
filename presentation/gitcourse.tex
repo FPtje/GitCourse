@@ -472,23 +472,34 @@ git add fixedFile
 \section{Remote repositories}
 
 \subsection{Local versus remote repository}
-\begin{frame}
-
+\begin{frame}{Local versus remote repository}
+\begin{itemize}
+\item Everything we've done so far was done without a server
+\item Except of course git clone
+\item Server is not \textit{needed}
+\item Copy of the repository with a way to access it
+\item ssh or https are common
+\end{itemize}
 \end{frame}
 
-\subsection{Adding a remote repository}
-\begin{frame}
-
+\subsection{Adding/removing a remote repository}
+\begin{frame}[fragile]{Adding/removing a remote repository}
+\begin{itemize}
+\item Not necessary when the repository is cloned
+\item Free to choose name, ``origin'' is de facto standard
+\item \begin{verbatim}git remote add name url\end{verbatim}
+\item Example:
+\begin{verbatim}git remote add origin git@github.com:FPtje/DarkRP.git\end{verbatim}
+\item You can add more than one remote (can actually be useful)
+\item Removing is done with
+\begin{verbatim}git remote remove name\end{verbatim}
+\end{itemize}
 \end{frame}
 
 \subsection{Showing remote repositories}
-\begin{frame}
-
-\end{frame}
-
-\subsection{Removing a remote repository}
-\begin{frame}
-
+\begin{frame}[fragile]{Showing remote repositories}
+\begin{verbatim}git remote -v\end{verbatim}
+\includegraphics[width=\linewidth]{gitremote.png}
 \end{frame}
 
 \subsection{Pushing and pulling}
