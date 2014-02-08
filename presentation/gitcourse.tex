@@ -381,7 +381,7 @@ git branch -D branchname
 \section{Resolving conflicts}
 
 \subsection{What is a conflict}
-\begin{frame}
+\begin{frame}{What is a conflict}
 \begin{itemize}
 	\item Harry and Larry are working on a website
 	\item Harry and Larry both edit the footer div of the main web page
@@ -422,6 +422,7 @@ the result.
 \item git status and git diff will tell you which files are conflicted.
 \item Fix the conflicts in visual studio or your favourite text editor.
 \item You can also set up a visual merge tool like opendiff, kdiff3, tkdiff, xxdiff, meld, \textbf{tortoisemerge}, gvimdiff, diffuse, ecmerge, p4merge, araxis, bc3, codecompare, emerge or vimdiff
+\item Use a visual merge tool with git mergetool
 \end{itemize}
 \end{frame}
 
@@ -445,7 +446,7 @@ Possible resolution:
 \end{frame}
 
 \subsection{Registering merged file}
-\begin{frame}[fragile]
+\begin{frame}[fragile]{Registering merged file}
 \begin{verbatim}
 git add fixedFile
 \end{verbatim}
@@ -457,8 +458,14 @@ git add fixedFile
 \end{frame}
 
 \subsection{Committing the merge}
-\begin{frame}
-
+\begin{frame}[fragile]{Committing the merge}
+\begin{itemize}
+\item \begin{verbatim}git commit\end{verbatim}
+\item It will have a default merge message
+\item vi or nano will be opened so you can edit this message
+\item However, you should leave it as it is.
+\item You can close nano with Ctrl+X and vi by typing :x and pressing enter
+\end{itemize}
 \end{frame}
 
 
