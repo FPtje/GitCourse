@@ -66,13 +66,14 @@ Remote repositories
 Best Practices and tips
 	- set up ssh-agent and ssh-add so you only have to enter your password once (alias pw='ssh-add ~/.ssh/id_rsa')
 	- atomicity commits
+	- Read up on commands, read the man pages
 	- avoid binary files in the repo at all cost, especially object files and executables. They do not belong in the repo and they will actively mess things up.
+	- always commit a working version of the code (everyone will hate you if you don't)
 	- use branches for experimental features, big refactors and things that will break other code until completely implemented
 	- Working alone? Use a private git repo and have your code synced between computers without having to resort to shitty dropbox
 	- push/pull often enough to prevent conflicts
 	- Do not change the history of commits that are already pushed to a repository
 	- before commit, do git status, then git diff, check your changes
-	- always commit a working version of the code (everyone will hate you if you don't)
 	- use private repositories for university projects or people WILL steal your code.
 		Look here for free private repos: https://git.wiki.kernel.org/index.php/GitHosting
 	- you can use a ui for git (even that terrible program called tortoise-git), but I do not recommend it. The cli can do MUCH more.

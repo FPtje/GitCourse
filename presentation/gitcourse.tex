@@ -142,7 +142,7 @@ git config --global user.email "johndoe@example.com"
 
 \begin{itemize}
 \item You will need a public/private keypair to communicate with a git server through ssh. Follow this guide:
-\item \url{https://help.github.com/articles/generating-ssh-keys}
+\item \href{http://git-scm.com/downloads/guis}{\color{blue}https://help.github.com/articles/generating-ssh-keys}
 \end{itemize}
 \end{frame}
 
@@ -214,7 +214,7 @@ There's also:
 \item .gitignore -- a file that contains regex patterns of files that git should leave alone. Use this for executables, .obj files etc.
 \end{itemize}
 Tip for .gitignore files:
-\url{https://github.com/github/gitignore}
+\href{http://git-scm.com/downloads/guis}{\color{blue}https://github.com/github/gitignore}
 \end{frame}
 
 \subsection{Committing changes}
@@ -517,8 +517,44 @@ git add fixedFile
 
 
 \section{Best Practices and tips}
-\begin{frame}
+\begin{frame}[fragile]{Best Practices and tips}
+\pause
+\begin{itemize}
+\item \begin{verbatim}alias pw="ssh-add ~/.ssh/id_rsa"\end{verbatim} 
+in .bashrc (\href{http://stackoverflow.com/questions/3669001/getting-ssh-agent-to-work-with-git-run-from-windows-command-shell/15870387#15870387}{\color{blue}Windows is slightly annoying here})
+\pause
+\item ONE commit = ONE thing!!
+\pause
+\item A commit should NOT break a build completely!
+\pause
+\item Get familliar with git commands.
+\pause
+\item Do NOT put ANY compiler generated files in the repository.
+\pause
+\item Use branches freely (experimental features, a stable branch, big refactors, etc.)
+\pause
+\item Use git even if you work alone.
+\pause
+\item Push/pull often enough to prevent conflicts.
+\pause
+\item Do not change the history of commits that are already pushed to a repository.
+\end{itemize}
+\end{frame}
 
+\begin{frame}[fragile]{Best Practices and tips}
+\begin{itemize}
+\item Before committing, always check git status and git diff.
+\pause
+\item Use private repositories for university projects.
+\href{http://git-scm.com/downloads/guis}{\color{blue}https://git.wiki.kernel.org/index.php/GitHosting}
+\item Github is awesome for open source projects.
+\pause
+\item Frightened by terminal commands?
+\href{http://git-scm.com/downloads/guis}{\color{blue}http://git-scm.com/downloads/guis} \\
+Really, though, the terminal is better than \textit{any} graphical tool.
+\pause
+\item Oh and whatever you do, don't use tortoisegit. It's even worse than tortoiseSVN.
+\end{itemize}
 \end{frame}
 
 
