@@ -600,12 +600,25 @@ Store your work for later \\
 \end{frame}
 
 \subsection{Git clean}
-\begin{frame}{Git clean}
-
+\begin{frame}[fragile]{Git clean}
+Remove files from the git folder that aren't tracked (or in the .gitignore) \\
+Nice alternative for Visual Studio's ``clean solution''. \\
+\begin{verbatim}
+git clean -xdn
+git clean -xdf
+\end{verbatim}
+\href{https://www.kernel.org/pub/software/scm/git/docs/git-clean.html}{\color{blue}https://www.kernel.org/pub/software/scm/git/docs/git-clean.html}
 \end{frame}
 
 \subsection{Git blame}
-\begin{frame}{Git blame}
+\begin{frame}[fragile]{Git blame}
+\begin{itemize}
+\item Much like SVN blame.
+\begin{verbatim}git blame file\end{verbatim}
+\item Press q to exit the viewer in the terminal.
+\end{itemize}
+\href{https://www.kernel.org/pub/software/scm/git/docs/git-blame.html}{\color{blue}https://www.kernel.org/pub/software/scm/git/docs/git-blame.html}
+\href{http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}{\color{blue}http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}
 
 \end{frame}
 
