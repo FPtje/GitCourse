@@ -39,6 +39,7 @@
 \begin{itemize}
 \item VCS (Version control systems)
 \item SCM (Source code management)
+\item Originally made by Linus Torvalds
 \item Basically it makes your life easier when programming
 \end{itemize}
 \end{frame}
@@ -74,7 +75,7 @@
 \subsection{Compared to SVN}
 \begin{frame}{Compared to SVN}
 \begin{itemize}
-\item \textit{Loads} faster
+\item Faster, by far
 \item Branching isn't terrible
 \item Cli isn't terrible
 \item SVN is \textit{very} limited in features once you know what git can do
@@ -82,6 +83,8 @@
 \item Pull requests
 \item Git has no single point of failure.
 \item Integrity checking (minor)
+\item ``\textit{Take CVS as an example of what not to do; if in doubt, make the exact opposite decision.}'' (Torvalds)
+\item (SVN's original slogan was CVS done right)
 
 \end{itemize}
 \end{frame}
@@ -249,13 +252,27 @@ Some of the info stored in the commit:
 \includegraphics[width=\linewidth]{gitdiff.png}
 \end{frame}
 
-\subsection{Git checkout file}
-\begin{frame}{Git checkout file}
+\subsection{git checkout file}
+\begin{frame}{git checkout file}
 \begin{itemize}
 \item Undoes all the changes made to a file since last commit.
 \item Doesn't leave a message
 \end{itemize}
 \includegraphics[width=\linewidth]{gitcheckoutfile.png}
+\end{frame}
+
+\subsection{git reset}
+\begin{frame}[fragile]{git reset}
+\begin{itemize}
+\item useful when you've messed up the files in your working directory
+\item Reset every file in your working directory to the last revision:
+
+\begin{verbatim}
+git reset --hard HEAD
+\end{verbatim}
+\item git reset can do many other things, but you shouldn't want to use most of those things.
+\item HEAD will be explained later
+\end{itemize}
 \end{frame}
 
 \subsection{git log}

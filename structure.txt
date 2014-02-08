@@ -36,6 +36,7 @@ Initial commit (assuming repo initiated with git init, which is easier to unders
 Further commits
 	- git diff
 	- git checkout file: resetting file to the state of last commit
+	- git reset --hard HEAD
 	- git log (See: http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History)
 	- (gitk)
 	- git show
@@ -69,6 +70,7 @@ Best Practices and tips
 	- use branches for experimental features, big refactors and things that will break other code until completely implemented
 	- Working alone? Use a private git repo and have your code synced between computers without having to resort to shitty dropbox
 	- push/pull often enough to prevent conflicts
+	- Do not change the history of commits that are already pushed to a repository
 	- before commit, do git status, then git diff, check your changes
 	- always commit a working version of the code (everyone will hate you if you don't)
 	- use private repositories for university projects or people WILL steal your code.
