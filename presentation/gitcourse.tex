@@ -503,8 +503,15 @@ git add fixedFile
 \end{frame}
 
 \subsection{Pushing and pulling}
-\begin{frame}
-
+\begin{frame}[fragile]{Pushing and pulling}
+\begin{itemize}
+\item push: Push your commits to a branch on a remote
+\item pull: Pull commits from a branch on a remote to your local repository
+\item \begin{verbatim}git push origin master\end{verbatim}
+\item \begin{verbatim}git pull origin master\end{verbatim}
+\item Can be shortened to git push and git pull if branch is set to track a remote branch
+\begin{verbatim}git branch --set-upstream-to=origin/master\end{verbatim}
+\end{itemize}
 \end{frame}
 
 
