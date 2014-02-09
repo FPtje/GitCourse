@@ -623,8 +623,27 @@ git clean -xdf
 \end{frame}
 
 \subsection{Pull requests}
-\begin{frame}{Pull requests}
+\begin{frame}[fragile]{Pull requests}
+\begin{itemize}
+\item Well implemented by github and gerrit
+\item Git has a command for it too
+\begin{verbatim}git request-pull origin/master origin\end{verbatim}
+\item Tip: When forking a project, work in a topic branch
+\item \href{https://help.github.com/articles/using-pull-requests}{\color{blue}https://help.github.com/articles/using-pull-requests}
+\item \href{http://git-scm.com/book/ch5-2.html}{\color{blue}http://git-scm.com/book/ch5-2.html}
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Git request-pull}
+\includegraphics[width=\linewidth]{gitrequestpull.png}
+\end{frame}
+
+\begin{frame}{Gerrit (Cyanogenmod)}
+\includegraphics[width=\linewidth]{gerrit.png}
+\end{frame}
+
+\begin{frame}{Github pull request}
+\includegraphics[width=\linewidth]{githubpull.png}
 \end{frame}
 
 \subsection{Cherry-pick}
