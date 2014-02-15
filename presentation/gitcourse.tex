@@ -619,11 +619,11 @@ git clean -xdf
 \href{http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}{\color{blue}http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}
 \end{frame}
 
-\subsection{Forking and pull requests}
+\subsection{Forking, pull requests and distributed workflows}
 
 \begin{frame}{Forking}
 \begin{itemize}
-\item Copy of someone else's repository on a git server
+\item Copy of a repository on a (different) git server
 \item All done using remotes
 \end{itemize}
 \includegraphics[width=\linewidth]{fork.png}
@@ -631,6 +631,7 @@ git clean -xdf
 
 \begin{frame}[fragile]{Pull requests}
 \begin{itemize}
+\item Ask original author to merge your changes
 \item Requires fork
 \item Well implemented by Github and gerrit
 \item Git has a command for it too
@@ -651,6 +652,26 @@ git clean -xdf
 
 \begin{frame}{Github pull request}
 \includegraphics[width=\linewidth]{githubpull.png}
+\end{frame}
+
+\begin{frame}[plain]{Workflows}
+\href{http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows}{\color{blue}http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows}
+\end{frame}
+
+\begin{frame}[plain]{Workflows, shared repository}
+\includegraphics[width=\linewidth]{sharedrepo.png}
+\end{frame}
+
+\begin{frame}[plain]{Workflows, Integration manager}
+\begin{itemize}
+\item Each their own fork
+\item One (or several) manager(s) to merge them all
+\end{itemize}
+\includegraphics[width=\linewidth]{integrationmanager.png}
+\end{frame}
+
+\begin{frame}[plain]{Workflows, Benevolent dictator}
+\includegraphics[width=\linewidth]{benevolentdictator.png}
 \end{frame}
 
 \subsection{Cherry-pick}
