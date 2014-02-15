@@ -617,13 +617,22 @@ git clean -xdf
 \end{itemize}
 \href{https://www.kernel.org/pub/software/scm/git/docs/git-blame.html}{\color{blue}https://www.kernel.org/pub/software/scm/git/docs/git-blame.html}
 \href{http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}{\color{blue}http://alblue.bandlem.com/2011/07/git-tip-of-week-assigning-blame.html}
-
 \end{frame}
 
-\subsection{Pull requests}
+\subsection{Forking and pull requests}
+
+\begin{frame}{Forking}
+\begin{itemize}
+\item Copy of someone else's repository on a git server
+\item All done using remotes
+\end{itemize}
+\includegraphics[width=\linewidth]{fork.png}
+\end{frame}
+
 \begin{frame}[fragile]{Pull requests}
 \begin{itemize}
-\item Well implemented by github and gerrit
+\item Requires fork
+\item Well implemented by Github and gerrit
 \item Git has a command for it too
 \begin{verbatim}git request-pull origin/master origin\end{verbatim}
 \item Tip: When forking a project, work in a topic branch

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>240</x>
+      <y>140</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>DarkRP
+--
+- Original repository
+- Public (Github)
+- Popular
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>140</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Gizmo's DarkRP
+--
+- Extra features
+- Some other changes
+- Private (bitbucket)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>380</x>
+      <y>250</y>
+      <w>200</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>Local git
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>190</x>
+      <y>190</y>
+      <w>200</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+ 
+Remote: upstream</panel_attributes>
+    <additional_attributes>100;30;100;100;180;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>190</y>
+      <w>160</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ 
+Remote: origin</panel_attributes>
+    <additional_attributes>90;30;90;100;30;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>370</x>
+      <y>270</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>
+--
+- Merge DarkRP into Gizmo
+- Maintain Gizmo's version</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
