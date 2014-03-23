@@ -479,11 +479,12 @@ git add fixedFile
 \subsection{Local versus remote repository}
 \begin{frame}{Remote repositories: Local versus remote repository}
 Git is a distributed VCS.
+
 \begin{itemize}
-\item (Almost) everything offline
+\item Everything so far has been done offline
 \item Server is not \textit{always} needed
 \item Local and remote copy of the repository
-\item Communication usually through ssh or https
+\item Communication usually through \textit{ssh} or \textit{https}
 \end{itemize}
 \end{frame}
 
@@ -492,10 +493,10 @@ Git is a distributed VCS.
 \begin{itemize}
 \item Not necessary when the repository is cloned
 \item Free to choose name, ``origin'' is de facto standard
-\item \begin{verbatim}git remote add name url\end{verbatim}
+\begin{verbatim}git remote add name url\end{verbatim}
 \item Example:
 \begin{verbatim}git remote add origin git@github.com:FPtje/DarkRP.git\end{verbatim}
-\item You can add more than one remote (can actually be useful)
+\item You can add more than one remote (is actually useful)
 \item Removing a remote:
 \begin{verbatim}git remote remove name\end{verbatim}
 \end{itemize}
@@ -511,11 +512,10 @@ Git is a distributed VCS.
 \begin{frame}[fragile]{Pushing and pulling}
 \begin{itemize}
 \item push: Push your commits to a branch on a remote
+\begin{verbatim}git push origin master\end{verbatim}
 \item pull: Pull commits from a branch on a remote to your local repository
-\item git pull = git fetch \&\& git merge
-\item \begin{verbatim}git push origin master\end{verbatim}
 \item \begin{verbatim}git pull origin master\end{verbatim}
-\item Can be shortened to git push and git pull if branch is set to track a remote branch
+\item Can be shortened to \texttt{git push} and \texttt{git pull} if branch is set to track a remote branch
 \begin{verbatim}git branch --set-upstream-to=origin/master\end{verbatim}
 \end{itemize}
 \end{frame}
