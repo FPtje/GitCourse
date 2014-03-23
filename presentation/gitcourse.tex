@@ -424,14 +424,14 @@ the result.
 \begin{itemize}
 \item Git will edit the files that have the conflicts
 \item ``conflict markers'' will be added.
-\item git status and git diff will tell you which files are conflicted.
+\item \texttt{git status} and \texttt{git diff} will tell you which files are conflicted.
 \item Fix the conflicts in visual studio or your favourite text editor.
 \item You can also set up a visual merge tool like opendiff, kdiff3, tkdiff, xxdiff, meld, \textbf{tortoisemerge}, gvimdiff, diffuse, ecmerge, p4merge, araxis, bc3, codecompare, emerge or vimdiff
 \item Use a visual merge tool with git mergetool
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]{Example conflict marker}
 \begin{verbatim}
 <<<<<<< HEAD
 <div id="footer">contact : email.support@github.com</div>
@@ -477,7 +477,7 @@ git add fixedFile
 \section{Remote repositories}
 
 \subsection{Local versus remote repository}
-\begin{frame}{Local versus remote repository}
+\begin{frame}{Remote repositories: Local versus remote repository}
 Git is a distributed VCS.
 \begin{itemize}
 \item (Almost) everything offline
