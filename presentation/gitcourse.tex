@@ -40,37 +40,36 @@
 \item VCS (Version control systems)
 \item SCM (Source code management)
 \item Originally made by Linus Torvalds
-\item Basically it makes your life easier when programming
 \end{itemize}
 \end{frame}
 
 \subsection{Advantages git}
 
-\begin{frame}{By itself}
+\begin{frame}{Advantages: By itself}
 \begin{itemize}
-\item Distributed
-\item Fast (both in speed of commands and workflow)
+\item Distributed (will be explained later)
+\item Fast (both in actual speed and workflow)
 \item You can work offline
 \item Forces you to have proper, structured workflow (and \textit{yes} this is good for everyone)
 \item Has many features that are actually useful
-\item It's useful even for people who work alone
-\item Amazing branching implementation
+\item It's useful \textbf{even} for people who work alone
+\item Branches (will be explained later)
 
 \end{itemize}
 \end{frame}
 % multiple remotes, no problem
 
-\begin{frame}{Compared to Dropbox/Google Drive}
+\begin{frame}{Advantages: Dropbox/Google Drive}
 \begin{itemize}
-\item No more copying folders for an experimental feature/recode (seriously, this is ridiculous)
-\item Work simultaneously without the \textit{utter} chaos of conflict files
-\item You can very easily revert if you make a mistake
+\item No more folder backups (seriously, this is ridiculous)
+\item No conflict file explosion
+\item Undoing mistakes
 \item Better tracking of changes
 \item The ability to find out when and by whom a bug was introduced
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Compared to SVN}
+\begin{frame}{Advantages: SVN}
 \begin{itemize}
 \item Faster, by far
 \item Branching isn't terrible
@@ -80,8 +79,8 @@
 \item Pull requests
 \item Git has no single point of failure.
 \item Integrity checking (minor)
-\item ``\textit{Take CVS as an example of what not to do; if in doubt, make the exact opposite decision.}'' (Torvalds)
-\item (SVN's original slogan was CVS done right)
+\item ``\textit{Take CVS as an example of what not to do; if in doubt, make the exact opposite decision.}'' (\href{http://www.youtube.com/watch?v=4XpnKHJAok8\&t=2m30s}{\color{blue}Torvalds})
+\item (SVN's original slogan was \textit{"CVS done right"})
 
 \end{itemize}
 \end{frame}
@@ -143,8 +142,8 @@ git config --global user.email "johndoe@example.com"
 \end{itemize}
 \end{frame}
 
-\subsection{Making a repository}
-\begin{frame}[fragile]{Making a repository}
+\subsection{Creating a repository}
+\begin{frame}[fragile]{Creating a repository}
 Two options:
 
 \begin{itemize}
@@ -156,7 +155,7 @@ Two options:
 	\end{verbatim}
 
 \begin{itemize}
-\item Clone the repository from a server.
+\item Clone the repository from a server (like svn checkout)
 \end{itemize}
 
 	\begin{verbatim}
@@ -169,12 +168,14 @@ Two options:
 \section{Basic git structure}
 \subsection{Basic git structure}
 \begin{frame}{Basic git structure}
-A git repository has three states
+A git repository has three environments:
 \begin{itemize}
-\item Working directory
-\item Staging area
-\item Git directory
+\item Working directory (the actual files)
+\item Staging area (about to commit)
+\item Git directory (committed)
 \end{itemize}
+
+A commit is a unit of change (snapshot).
 \end{frame}
 
 \begin{frame}[plain]
@@ -185,27 +186,33 @@ A git repository has three states
 \includegraphics[width=\linewidth]{fileLifeCycle.png}
 \end{frame}
 
-\subsection{Initial commit}
-\begin{frame}{Initial commit}
-Applies only to an empty repository (created by git init)
+\subsection{Initial work}
+\begin{frame}{Initial work}
+\begin{itemize}
+\item After git init
+\item Clean repository
+\item Untracked files
+\end{itemize}
+
 \includegraphics[width=\linewidth]{gitStatus1.png}
 \end{frame}
 
 \subsection{Adding/removing files}
-\begin{frame}
+\begin{frame}{Adding (staging) files}
 \includegraphics[width=\linewidth]{gitAdd.png}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Unstaging files}
+Without \texttt{--cached} it removes the actual file.
 \includegraphics[width=\linewidth]{gitrmcached.png}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Staging all files}
 \includegraphics[width=\linewidth]{gitaddall.png}
 \end{frame}
 
-\begin{frame}
-There's also:
+\begin{frame}{There's also}
+
 \begin{itemize}
 \item git mv file location -- Move or rename a file. Same syntax as mv command.
 \item .gitignore -- a file that contains regex patterns of files that git should leave alone. Use this for executables, .obj files etc.
@@ -217,8 +224,8 @@ Tip for .gitignore files:
 \subsection{Committing changes}
 \begin{frame}[fragile]{Committing changes}
 \begin{itemize}
-\item Commit everything that's staged using git commit
-\item Every commit message \textit{must} have a commit message! Tell git what you've done!
+\item Commit everything that's staged using \texttt{git commit}
+\item Every commit \uline{must} have a commit message! Tell git what you've done!
 \end{itemize}
 \begin{verbatim}
 -- Opens vi or nano by default for the commit message:
@@ -471,12 +478,12 @@ git add fixedFile
 
 \subsection{Local versus remote repository}
 \begin{frame}{Local versus remote repository}
+Git is a distributed VCS.
 \begin{itemize}
-\item Everything we've done so far was done without a server
-\item Except of course git clone
-\item Server is not \textit{needed}
-\item Copy of the repository with a way to access it
-\item ssh or https are common
+\item (Almost) everything offline
+\item Server is not \textit{always} needed
+\item Local and remote copy of the repository
+\item Communication usually through ssh or https
 \end{itemize}
 \end{frame}
 
@@ -518,7 +525,7 @@ git add fixedFile
 \begin{frame}[fragile]{Best Practices and tips}
 \pause
 \begin{itemize}
-\item \begin{verbatim}alias pw="ssh-add ~/.ssh/id_rsa"\end{verbatim} 
+\item \begin{verbatim}alias pw="ssh-add ~/.ssh/id_rsa"\end{verbatim}
 in .bashrc (\href{https://help.github.com/articles/working-with-ssh-key-passphrases}{\color{blue}Windows is slightly annoying here})
 \pause
 \item ONE commit = ONE thing!!
@@ -705,6 +712,7 @@ git clean -xdf
 
 \begin{frame}{Previously posted links}
 \begin{itemize}
+\item \href{http://www.youtube.com/watch?v=4XpnKHJAok8\&t=2m30s}{\color{blue}http://www.youtube.com/watch?v=4XpnKHJAok8\&t=2m30s}
 \item \href{https://help.github.com/articles/generating-ssh-keys}{\color{blue}https://help.github.com/articles/generating-ssh-keys}
 \item \href{https://github.com/github/gitignore}{\color{blue}https://github.com/github/gitignore}
 \item \href{https://help.github.com/articles/working-with-ssh-key-passphrases}{\color{blue}https://help.github.com/articles/working-with-ssh-key-passphrases}
