@@ -171,9 +171,8 @@ A commit is a unit of change (not a snapshot).
 \subsection{Initial work}
 \begin{frame}{Initial work}
 \begin{itemize}
-\item After git init
-\item Clean repository
-\item Untracked files
+\item Right after \texttt{git init}
+\item I created some files:
 \end{itemize}
 
 \includegraphics[width=\linewidth]{gitStatus1.png}
@@ -231,10 +230,10 @@ Some of the info stored in the commit:
 \includegraphics[width=\linewidth]{gitlogcommit.png}
 \end{frame}
 
-\section{Further commits}
+\section{Other commands}
 
 \subsection{git diff}
-\begin{frame}{Further commits: git diff}
+\begin{frame}{Further commands: git diff (exit with 'q') }
 \includegraphics[width=30em]{gitdiff.png}
 \end{frame}
 
@@ -242,7 +241,6 @@ Some of the info stored in the commit:
 \begin{frame}{git checkout file}
 \begin{itemize}
 \item Undo all changes to a file since last commit.
-\item Doesn't leave a message
 \end{itemize}
 \includegraphics[width=\linewidth]{gitcheckoutfile.png}
 \end{frame}
@@ -262,7 +260,7 @@ git reset --hard HEAD
 \end{frame}
 
 \subsection{git log}
-\begin{frame}{git log}
+\begin{frame}{git log (exit with 'q')}
 \centerline{\includegraphics[height=6cm]{gitlog.png}}
 \end{frame}
 
@@ -299,10 +297,15 @@ git show 7251b9
 \begin{itemize}
 \item This is what we've been committing to so far.
 \item Much like a linked list
-\item Every commit knows its parent(s)
-\item Tip of the branch is called HEAD, then HEAD\^{}, HEAD\~{}2, ...
+\item Every commit knows its parents (predecessors)
+\item Latest commit is called HEAD, then HEAD\^{}, HEAD\~{}2, ...
 \end{itemize}
 \includegraphics[width=\linewidth]{masterbranch.png}
+\end{frame}
+
+\subsection{Multiple branches}
+\begin{frame}{Multiple branches}
+\centerline{\includegraphics[width=13em]{branch.png}}
 \end{frame}
 
 \subsection{Creating your own branch}
@@ -313,7 +316,7 @@ git checkout branchname
 \end{verbatim}
 \begin{itemize}
 \item Mind the git checkout command. It might be confusing at first.
-\item Shorter:
+\item Both commands combined:
 \end{itemize}
 
 \begin{verbatim}
