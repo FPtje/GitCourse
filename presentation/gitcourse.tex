@@ -405,14 +405,12 @@ the result.
 
 \subsection{Fixing the conflicts in the file}
 % It's not a mess
-\begin{frame}[fragile]{Fixing the conflicts in the file}
+\begin{frame}[fragile]{Fixing the conflicts in the file (traditional way)}
 \begin{itemize}
-\item Git will edit the files that have the conflicts
-\item ``conflict markers'' will be added.
 \item \texttt{git status} and \texttt{git diff} will tell you which files are conflicted.
-\item Fix the conflicts in visual studio or your favourite text editor.
+\item Fix the conflicts in the file itself.
 \item You can also set up a visual merge tool like opendiff, kdiff3, tkdiff, xxdiff, meld, \textbf{tortoisemerge}, gvimdiff, diffuse, ecmerge, p4merge, araxis, bc3, codecompare, emerge or vimdiff
-\item Use a visual merge tool with git mergetool
+\item Use a visual merge tool with \texttt{git mergetool}
 \end{itemize}
 \end{frame}
 
@@ -427,7 +425,7 @@ the result.
 >>>>>>> refactor
 \end{verbatim}
 
-Possible resolution:
+Possible resolution (replace above with):
 \begin{verbatim}
 <div id="footer">
   please contact us at email.support@github.com
@@ -453,7 +451,7 @@ git add fixedFile
 \item \begin{verbatim}git commit\end{verbatim}
 \item It will have a default merge message
 \item vi or nano will be opened so you can edit this message
-\item However, you should leave it as it is.
+\item You \textbf{should} leave it as it is.
 \item You can close nano with Ctrl+X and vi by typing :x and pressing enter
 \end{itemize}
 \end{frame}
